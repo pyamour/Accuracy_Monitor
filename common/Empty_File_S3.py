@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-#Access key ID = 'AKIAJWILCZEKUOJXDYIQ'
-#Secret access key = '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'
+#Access key ID = 'ABCDEFGHIJKLMNOPQ'
+#Secret access key = 'QWERTYUIOPASDFGHJKLZXCVBNM'
 #above is just for QA
 import subprocess
 import time
@@ -15,7 +15,7 @@ from IPython.display import clear_output
 
 class Empty_File_S3():
     
-    def __init__(self,bucket="testinternalrealmaster",exclude=[],condo=False):
+    def __init__(self,bucket="testinternalrealestate",exclude=[],condo=False):
         self.bucket = bucket
         self.exclude = exclude
         self.condo = condo
