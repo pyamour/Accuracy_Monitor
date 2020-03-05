@@ -6,5 +6,5 @@ CD_LABEL = ['Condo Apt', 'Comm Element Condo', 'Co-Ownership Apt', 'Co-Op Apt', 
             'Condo Apartment', 'Phased Condo']
 exclude_list = ["Sold#20190305211532.csv.gz","Listing#20190316092234.csv.gz","Listing#20190317030001.csv.gz","Listing#20190324030001.csv.gz","Sold#20190328091644.csv.gz","Sold#20190328205309.csv.gz"]
 fraud_id = ['TRBS4398907',"TRBW4387431","TRBN4380052","TRBN4400154","TRBC4399153","TRBW4421347","TRBN4402155","TRBW4449366"]
-datalake = "/media/qindom-cpu/wd2/datalake/"
-cnnstr = "mysql+pymysql://foodhwy:Liangzizhineng@8888@192.168.9.114:3306/fds_pro"
+datalake = "/media/datalake/"
+cnnstr = "mysql+pymysql://user:password@192.168.1.1:3306/db"
