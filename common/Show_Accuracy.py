@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # 准确率分析
+# # Accuracy analysis
 
 
 
@@ -122,7 +122,7 @@ class Show_Accuracy():
         plt.show()
         """
 
-        Home_Qindom_Estimate = len(df_result)
+        Home_Estimate = len(df_result)
         df_result = df_result.sort_values(by = 'diff_ratio', ascending = False)
         #print(df_result)   
         median_error = df_result['diff_ratio'].quantile(0.5)
@@ -158,7 +158,7 @@ class Show_Accuracy():
         mean_error = df_result['diff_ratio'].mean()
 
         print("\nPerformance:\n")
-        print('Home_Qindom_Estimate: ' + str(Home_Qindom_Estimate))
+        print('Home_Estimate: ' + str(Home_Estimate))
         print("within_3_percent: " + '%.2f%%' % (within_3_percent * 100) + ' with median: ' + '%.2f%%' % (median_within_3_percent * 100)) 
         #print('within_5_percent: ' + '%.2f%%' % (within_5_percent * 100) + ' with mean: ' + '%.2f%%' % (mean_within_5_percent * 100)) 
         print('within_5_percent: ' + '%.2f%%' % (within_5_percent * 100) + ' with median: ' + '%.2f%%' % (median_within_5_percent * 100)) 
