@@ -1,5 +1,5 @@
-#Access key ID = 'AKIAJWILCZEKUOJXDYIQ'
-#Secret access key = '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'
+#Access key ID = 'ABCDEFGHIJKLMNOPQ'
+#Secret access key = 'QWERTYUIOPASDFGHJKLZXCVBNM'
 #above is just for QA
 import subprocess
 import time
@@ -12,7 +12,7 @@ from IPython.display import clear_output
 
 class Upload_File_S3():
     
-    def __init__(self,path = '/home/jimmy/FDS/Data/Online-Results/internalrealmaster/',interval=30,num_begin="20190214000000",num_end="20190228240000"):
+    def __init__(self,path = '/Data/Online-Results/internalrealestate/',interval=30,num_begin="20190214000000",num_end="20190228240000"):
         self.path = path
         self.interval = interval
         self.num_begin = num_begin
@@ -82,7 +82,7 @@ class Upload_File_S3():
                 while wait_time < interval:
                     time.sleep(60)
                     wait_time = wait_time + 1
-                    cmdln = "aws s3 ls s3://testinternalrealmaster/shard/  --region us-east-2 "
+                    cmdln = "aws s3 ls s3://testinternalrealestate/shard/  --region us-east-2 "
                     p = subprocess.Popen(cmdln, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
                     for line in p.stdout.readlines():
                         clear_output()
@@ -91,7 +91,7 @@ class Upload_File_S3():
                             finished = True
                     if finished:
                         break
-                    cmdln = "aws s3 ls s3://testrealmaster/  --region us-east-2 "
+                    cmdln = "aws s3 ls s3://testrealestate/  --region us-east-2 "
                     p = subprocess.Popen(cmdln, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
                     for line in p.stdout.readlines():
                         clear_output()
@@ -113,7 +113,7 @@ class Upload_File_S3():
                 while wait_time < interval:
                     time.sleep(60)
                     wait_time = wait_time + 1
-                    cmdln = "aws s3 ls s3://testrealmaster/  --region us-east-2 "
+                    cmdln = "aws s3 ls s3://testrealestate/  --region us-east-2 "
                     p = subprocess.Popen(cmdln, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
                     for line in p.stdout.readlines():
                         clear_output()
