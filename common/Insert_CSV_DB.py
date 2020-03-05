@@ -10,7 +10,7 @@ from IPython.display import clear_output
 
 class Insert_CSV_DB():
     
-    def __init__(self,table,col,csv="",df=None,dblink="mysql+pymysql://fds:Liangzizhineng@8888@internal.qindom.com:3306/",schema="fds_pro"):
+    def __init__(self,table,col,csv="",df=None,dblink,schema):
         self.table = table
         self.col = col #update_col_on_duplicate_key
         self.csv = csv
