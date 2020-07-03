@@ -1,6 +1,4 @@
-#Access key ID = 'ABCDEFGHIJKLMNOPQ'
-#Secret access key = 'QWERTYUIOPASDFGHJKLZXCVBNM'
-#above is just for QA
+
 import subprocess
 import time
 import os
